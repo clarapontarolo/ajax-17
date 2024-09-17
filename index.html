@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt=br">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script>
+        
+        function loadDoc(){
+            const xhttp = XMLHttpRequest();
+            xhttp.onload = function(){
+                document.getElementById("demo").innerHTML = this.responseText;
+            }
+            xhttp.open("GET, "velha_raposa.txt",true);
+            xhttp.send();
+        }
+
+
+    </script>
 </head>
 <body>
     <div id="demo">
-        <h1>Ajax vai mudar </h1>
-        <button type="button" onclick="loadDoc()"<muda tudo</button
+        <h1>O Ajax vai mudar tudo!</h1>
+        <button type="button" onclick="loadDoc()">Muda Tudo</button>
+
+    </div>
 </body>
-</html>
+</html>j
